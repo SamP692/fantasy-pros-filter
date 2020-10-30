@@ -14,10 +14,12 @@ to the cheat sheet rankings.
   - [Tools](#tools)
     - [Node](#node)
     - [TypeScript](#typescript)
+    - [RequireJS and AMD Modules](#requirejs-and-amd-modules)
   - [Building the Project](#building-the-project)
     - [Executing the Build](#executing-the-build)
     - [Shell Script Permissions Issues](#shell-script-permissions-issues)
     - [Convenience Tip](#convenience-tip)
+- [TODO](#todo)
 
 ## Supported Features
 
@@ -27,7 +29,7 @@ For instance, perhaps it's Week 3 of the NFL season. The user may want to see an
 for the entirety of the prior season, but additionally include the top 10 most accurate experts from the current season. This
 can be annoying to do by hand.
 
-At the moment, this extension only supports inclusive selections when accuracy ranking thresholds are set for both the current
+**Limitation Note:** At the moment, this extension only supports inclusive selections when accuracy ranking thresholds are set for both the current
 year, as well as the prior year. This means that if the user includes the top 50 ranked experts from the prior year, for instance, an expert
 falling into that group will be selected, even if the user selected, for instance, the top 20 experts from teh current year and the expert in
 question falls outside of that group.
@@ -44,7 +46,7 @@ The user can select an accuracy rank for the prior year that will include all ep
 
 The user can select how many days old an expert's opinion can be for that expert to be included in the selection.
 
-Example: A user may want to see what experts think about players for the remainder of the season after a particularly injury has occured.
+**Example:** A user may want to see what experts think about players for the remainder of the season after a particularly injury has occured.
 In this case, they'll likely want to ensure no expert opinions are included that were registered with Fantasy Pros prior to today, given that
 those opinions likely don't take this particular injury into account.
 
@@ -73,10 +75,17 @@ TypeScript compiler in order to prepare functional code for deployment.
 If you don't have TypeScript on your machine, install it with:
 `npm install --global typescript`
 
+#### RequireJS and AMD Modules
+
+For simplicity, this project accesses the DOM using "vanilla TS" and to keep things relatively painless, it uses AMD modules and RequireJS to compile each
+project into a simple single-file application.
+
 ### Building the Project
 
-You'll notice this project does not have a `package.json` file. This package has no local dependencies and subsequently really has no need for a file
-dedicated to Node.js declarations. Moreover, because the project uses a raw `index.html` file which needs to be included in the final extension package, some
+You'll notice this project does not have a `package.json` file. This package only uses RequireJS as a runtime dependency and subsequently really has no real need for a file
+dedicated to Node.js declarations.
+
+Moreover, because the project uses a raw `index.html` file which needs to be included in the final extension package, some
 external tooling was needed. Subsequently, this project only uses a bash script to do everything it needs to do to execute the build processes.
 
 #### Executing the Build
@@ -98,3 +107,12 @@ function run() {
 ```
 
 At this point you can simply execute `run build` from your terminal, while within the project directory.
+
+## TODO
+
+[] Determine whether or not content scripts will need RequireJS or can be shipped as several files
+  [] If RequireJS is needed:
+    [] Figure out how to ensure RequireJS is loaded first
+    [] Update build script to add RequireJS to `content-scripts` project
+  [] If RequireJS is not needed:
+    [] Updated tsconfigs to separately define the output of their builds 
