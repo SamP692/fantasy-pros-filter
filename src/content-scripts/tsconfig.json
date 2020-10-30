@@ -1,0 +1,10 @@
+{
+    "extends": "../../tsconfig.base.json",
+    "compilerOptions": {
+        "outFile": "../../dist/content-scripts/index.js",
+        "rootDir": "./",
+        "baseUrl": "./",
+        // "paths": {},
+    }
+}
+  
