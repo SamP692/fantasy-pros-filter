@@ -19,6 +19,10 @@ tsc --p src/content-scripts/tsconfig.json || exit
 {
     cp -r src/extension-ui/index.html dist/extension-ui/
 } || exit
+
+{
+    cp -r deps/require.js dist/extension-ui/
+} || exit
 echo 'Built Extension Content Scripts Project'
 
 echo 'Built Extension'
