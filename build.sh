@@ -1,4 +1,7 @@
-echo 'Building Extension'
+bold=$(tput bold)
+normal=$(tput sgr0)
+
+echo "${bold}STARTING${normal} Extension Build Process"
 
 echo 'Removing Previous Build'
 {
@@ -19,3 +22,4 @@ tsc --p src/content-scripts/tsconfig.json || exit
 echo 'Built Extension Content Scripts Project'
 
 echo 'Built Extension'
+echo "${bold}COMPLETED${normal} Extension Build Process"
