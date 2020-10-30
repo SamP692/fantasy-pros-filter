@@ -5,20 +5,19 @@ This repo creates a local chrome extension that augments Fantasy Pros' cheat she
 When the extension is installed, the user will be able to more granularly filter the experts they want contributing
 to the cheat sheet rankings.
 
-- [Fantasy Pros Cheat Sheet Filter](#fantasy-pros-cheat-sheet-filter)
-  - [Supported Features](#supported-features)
-    - [Current Year Expert Ranks](#current-year-expert-ranks)
-    - [Prior Year Expert Ranks](#prior-year-expert-ranks)
-    - [Days Old](#days-old)
-    - [Rookies Only](#rookies-only)
-  - [Contributing](#contributing)
-    - [Tools](#tools)
-      - [Node](#node)
-      - [TypeScript](#typescript)
-    - [Building the Project](#building-the-project)
-      - [Executing the Build](#executing-the-build)
-      - [Shell Script Permissions Issues](#shell-script-permissions-issues)
-      - [Convenience Tip](#convenience-tip)
+- [Supported Features](#supported-features)
+  - [Current Year Expert Ranks](#current-year-expert-ranks)
+  - [Prior Year Expert Ranks](#prior-year-expert-ranks)
+  - [Days Old](#days-old)
+  - [Rookies Only](#rookies-only)
+- [Contributing](#contributing)
+  - [Tools](#tools)
+    - [Node](#node)
+    - [TypeScript](#typescript)
+  - [Building the Project](#building-the-project)
+    - [Executing the Build](#executing-the-build)
+    - [Shell Script Permissions Issues](#shell-script-permissions-issues)
+    - [Convenience Tip](#convenience-tip)
 
 ## Supported Features
 
