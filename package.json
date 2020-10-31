@@ -1,0 +1,22 @@
+{
+  "name": "fantasy-pros-filter",
+  "version": "0.0.1",
+  "description": "This repo creates a local chrome extension that augments Fantasy Pros' cheat sheet expert filtering.",
+  "main": "index.js",
+  "scripts": {
+    "build": "sh ./build.sh"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/SamP692/fantasy-pros-filter.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/SamP692/fantasy-pros-filter/issues"
+  },
+  "homepage": "https://github.com/SamP692/fantasy-pros-filter#readme",
+  "devDependencies": {
+    "@types/chrome": "0.0.126"
+  }
+}
