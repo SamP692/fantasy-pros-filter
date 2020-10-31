@@ -1,9 +1,4 @@
 /**
- *  * Attach current year rank component
- *  * Attach prior year rank component
- *  * Attach rookies only component
- *  * Attach days old component
- *  * Attach update screen button
  *  * Attach more info section
  *  * Attach errors section
  */
@@ -106,7 +101,7 @@ class App {
             input: inputComponent
         }
     }
- 
+
     private injectFilterTable(): void {
         this.rootEl.append(this.filterTable)
     }
