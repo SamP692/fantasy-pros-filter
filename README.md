@@ -115,7 +115,7 @@ At this point you can simply execute `run build` from your terminal, while withi
         [] Figure out how to ensure RequireJS is loaded first
         [] Update build script to add RequireJS to `content-scripts` project
     [] If RequireJS is not needed:
-        [] Updated tsconfigs to separately define the output of their builds 
+        [] Updated tsconfigs to separately define the output of their builds
 [] Add error notifications to popup
     [] Bad config
     [] Content script error
