@@ -1,22 +1,41 @@
 {
-  "name": "fantasy-pros-filter",
-  "version": "0.0.1",
-  "description": "This repo creates a local chrome extension that augments Fantasy Pros' cheat sheet expert filtering.",
-  "main": "index.js",
-  "scripts": {
-    "build": "sh ./build.sh"
-  },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/SamP692/fantasy-pros-filter.git"
-  },
-  "author": "",
-  "license": "ISC",
-  "bugs": {
-    "url": "https://github.com/SamP692/fantasy-pros-filter/issues"
-  },
-  "homepage": "https://github.com/SamP692/fantasy-pros-filter#readme",
-  "devDependencies": {
-    "@types/chrome": "0.0.126"
-  }
+    "name": "fantasy-pros-filter",
+    "version": "0.0.1",
+    "description": "This repo creates a local chrome extension that augments Fantasy Pros' cheat sheet expert filtering.",
+    "scripts": {
+        "build": "npm run build:ui; npm run build:script",
+        "build:ui": "webpack -c ./webpack/webpack.extension-ui.js",
+        "build:script": "webpack -c ./webpack/webpack.content-script.js"
+    },
+    "repository": {
+        "type": "git",
+        "url": "git+https://github.com/SamP692/fantasy-pros-filter.git"
+    },
+    "author": "",
+    "license": "ISC",
+    "bugs": {
+        "url": "https://github.com/SamP692/fantasy-pros-filter/issues"
+    },
+    "homepage": "https://github.com/SamP692/fantasy-pros-filter#readme",
+    "dependencies": {
+        "react": "^17.0.1",
+        "react-dom": "^17.0.1"
+    },
+    "devDependencies": {
+        "@babel/core": "^7.12.3",
+        "@babel/preset-env": "^7.12.1",
+        "@babel/preset-react": "^7.12.5",
+        "@types/chrome": "0.0.126",
+        "@types/react": "^16.9.56",
+        "@types/react-dom": "^16.9.9",
+        "awesome-typescript-loader": "^5.2.1",
+        "babel-loader": "^8.2.1",
+        "clean-webpack-plugin": "^3.0.0",
+        "css-loader": "^5.0.1",
+        "html-webpack-plugin": "^5.0.0-alpha.10",
+        "style-loader": "^2.0.0",
+        "typescript": "^4.0.5",
+        "webpack": "^5.4.0",
+        "webpack-cli": "^4.2.0"
+    }
 }
