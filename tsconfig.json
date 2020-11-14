@@ -1,0 +1,20 @@
+{
+    "compilerOptions": {
+        "allowSyntheticDefaultImports": true,
+        "jsx": "react",
+        "module": "commonjs",
+        "noImplicitAny": true,
+        "esModuleInterop": true,
+        "preserveConstEnums": true,
+        "removeComments": true,
+        "target": "es5",
+        "baseUrl": ".",
+        "paths": {
+            "~ui/*": ["apps/extension-ui/*"],
+            "~script/*": ["apps/content-script/*"]
+        }
+    },
+    "include": [
+        "./apps/"
+    ],
+}
