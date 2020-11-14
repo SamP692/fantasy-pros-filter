@@ -1,9 +1,9 @@
 /* Libraries */
 import React, { PropsWithChildren } from 'react'
 
-/* Styles */
+/* App Container Styles */
 const appContainerStyles = {
-    background: 'blue'
+    padding: '10px'
 }
 
 /* App Container */

@@ -1,1 +1,5 @@
 export { default as AppContainer } from './AppContainer'
+export { default as AppHeader } from './AppHeader'
+export { default as FilterTable } from './FilterTable'
+export { default as NumericFilter } from './NumericFilter'
+export { default as BooleanFilter } from './BooleanFilter'
