@@ -1,7 +1,10 @@
 /* Libraries */
-import React from 'react'
+import React, { useContext } from 'react'
 
 import { Header } from 'semantic-ui-react'
+
+/* Context */
+import { filterStoreContext } from '~ui/store'
 
 /* Components */
 import {
@@ -12,9 +15,12 @@ import {
 
 /* Filter Selection */
 function FilterSelection() {
-    function onChange() {
-
-    }
+    const {
+        setCurrentYearExpertRank,
+        setCurrentYearRookies,
+        setLastYearExpertRank,
+        setOpinionDaysOld
+    } = useContext(filterStoreContext)
 
     return (
         <>
@@ -23,22 +29,22 @@ function FilterSelection() {
             <FilterTable>
                 <NumericFilter
                     label='Last Season Expert Rank'
-                    onChange={onChange}
+                    onChange={setLastYearExpertRank}
                 />
 
                 <NumericFilter
                     label='Current Season Expert Rank'
-                    onChange={onChange}
+                    onChange={setCurrentYearExpertRank}
                 />
 
                 <NumericFilter
                     label='Expert Opinion Days Old'
-                    onChange={onChange}
+                    onChange={setOpinionDaysOld}
                 />
 
                 <BooleanFilter
                     label='Current Year Rookie Experts Only'
-                    onChange={onChange}
+                    onChange={setCurrentYearRookies}
                 />
             </FilterTable>
         </>

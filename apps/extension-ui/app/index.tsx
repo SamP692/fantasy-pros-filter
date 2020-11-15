@@ -1,6 +1,9 @@
 /* Libraries */
 import React from 'react'
 
+/* Store Provider */
+import { FilterStoreProvider } from '~ui/store'
+
 /* Containers */
 import FilterSelection from './FilterSelection'
 
@@ -13,11 +16,13 @@ import {
 /* App */
 function App() {
     return (
-        <AppContainer>
-            <AppHeader headerText='Fantasy Pros Advanced Expert Filter' />
+        <FilterStoreProvider>
+            <AppContainer>
+                <AppHeader headerText='Fantasy Pros Advanced Expert Filter' />
 
-            <FilterSelection />
-        </AppContainer>
+                <FilterSelection />
+            </AppContainer>
+        </FilterStoreProvider>
     )
 }
 
