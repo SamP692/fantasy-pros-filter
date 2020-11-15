@@ -1,13 +1,17 @@
 /* Libraries */
-import React, { FormEvent } from 'react'
+import React from 'react'
 
 import {
     Grid,
-    Header,
     Checkbox
 } from 'semantic-ui-react'
 
+import type { FormEvent } from 'react'
 import type { CheckboxProps } from 'semantic-ui-react'
+
+/* Components */
+import FilterLabelCell from './FilterLabelCell'
+import FilterValueCell from './FilterValueCell'
 
 /* Numeric Filter Props */
 interface NumericFilterProps {
@@ -23,18 +27,16 @@ function NumericFilter({ label, onChange }: NumericFilterProps) {
 
     return (
         <Grid.Row>
-            <Grid.Column width={13}>
-                <Header as='h5'>
-                    {label}
-                </Header>
-            </Grid.Column>
+            <FilterLabelCell>
+                {label}
+            </FilterLabelCell>
 
-            <Grid.Column width={3}>
+            <FilterValueCell>
                 <Checkbox
                     placeholder={99}
                     onChange={propogateChange}
                 />
-            </Grid.Column>
+            </FilterValueCell>
         </Grid.Row>
     )
 }

@@ -7,6 +7,10 @@ import {
     Input
 } from 'semantic-ui-react'
 
+/* Components */
+import FilterLabelCell from './FilterLabelCell'
+import FilterValueCell from './FilterValueCell'
+
 /* Numeric Filter Props */
 interface NumericFilterProps {
     label: string
@@ -25,19 +29,17 @@ function NumericFilter({ label, onChange }: NumericFilterProps) {
 
     return (
         <Grid.Row>
-            <Grid.Column width={13}>
-                <Header as='h5'>
-                    {label}
-                </Header>
-            </Grid.Column>
+            <FilterLabelCell>
+                {label}
+            </FilterLabelCell>
 
-            <Grid.Column width={3}>
+            <FilterValueCell>
                 <Input
                     type="number"
                     placeholder={99}
                     onChange={propogateChange}
                 />
-            </Grid.Column>
+            </FilterValueCell>
         </Grid.Row>
     )
 }
