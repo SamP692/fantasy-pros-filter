@@ -11,7 +11,7 @@ import type { PropsWithChildren } from 'react'
 /* Numeric Filter */
 function FilterCellLabel({ children }: PropsWithChildren<{}>) {
     return (
-        <Grid.Column width={11}>
+        <Grid.Column verticalAlign='middle' width={11}>
             <Header as='h5'>
                 {children}
             </Header>
