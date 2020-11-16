@@ -35,7 +35,8 @@ function NumericFilter({ label, onChange }: NumericFilterProps) {
 
             <FilterValueCell>
                 <Input
-                    type="number"
+                    type='number'
+                    transparent
                     placeholder={99}
                     onChange={propogateChange}
                 />
