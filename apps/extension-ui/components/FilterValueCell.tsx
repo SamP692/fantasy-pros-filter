@@ -8,7 +8,7 @@ import type { PropsWithChildren } from 'react'
 /* Numeric Filter */
 function FilterValueCell({ children }: PropsWithChildren<{}>) {
     return (
-        <Grid.Column width={3}>
+        <Grid.Column verticalAlign='middle' textAlign='center' width={5}>
             {children}
         </Grid.Column>
     )
