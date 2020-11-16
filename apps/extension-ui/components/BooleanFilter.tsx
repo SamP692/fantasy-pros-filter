@@ -14,13 +14,13 @@ import FilterLabelCell from './FilterLabelCell'
 import FilterValueCell from './FilterValueCell'
 
 /* Numeric Filter Props */
-interface NumericFilterProps {
+interface BooleanFilterProps {
     label: string
     onChange: (newValue: boolean) => void
 }
 
 /* Numeric Filter */
-function NumericFilter({ label, onChange }: NumericFilterProps) {
+function BooleanFilter({ label, onChange }: BooleanFilterProps) {
     function propogateChange(_: FormEvent<HTMLInputElement>, { checked }: CheckboxProps) {
         onChange(!!checked)
     }
@@ -32,13 +32,10 @@ function NumericFilter({ label, onChange }: NumericFilterProps) {
             </FilterLabelCell>
 
             <FilterValueCell>
-                <Checkbox
-                    placeholder={99}
-                    onChange={propogateChange}
-                />
+                <Checkbox onChange={propogateChange} />
             </FilterValueCell>
         </Grid.Row>
     )
 }
 
-export default NumericFilter
+export default BooleanFilter
