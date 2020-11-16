@@ -5,7 +5,8 @@
     "scripts": {
         "build": "npm run build:ui; npm run build:script",
         "build:ui": "webpack -c ./webpack/webpack.extension-ui.js",
-        "build:script": "webpack -c ./webpack/webpack.content-script.js"
+        "build:script": "webpack -c ./webpack/webpack.content-script.js",
+        "start:ui": "webpack serve -c ./webpack/webpack.extension-ui.dev.js"
     },
     "repository": {
         "type": "git",
@@ -39,6 +40,7 @@
         "typescript": "^4.0.5",
         "webpack": "^5.4.0",
         "webpack-cli": "^4.2.0",
+        "webpack-dev-server": "^3.11.0",
         "webpack-merge": "^5.4.0"
     }
 }
