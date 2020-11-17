@@ -11,9 +11,9 @@ import type { AppError } from './type-definitions'
 
 /* Filter Store Provider */
 function FilterStoreProvider({ children }: PropsWithChildren<{}>) {
-    const [lastYearExpertRank, setLastYearExpertRank] = useState<number | undefined>()
-    const [currentYearExpertRank, setCurrentYearExpertRank] = useState<number | undefined>()
-    const [opinionDaysOld, setOpinionDaysOld] = useState<number | undefined>()
+    const [lastYearExpertRank, setLastYearExpertRank] = useState<number | undefined>(50)
+    const [currentYearExpertRank, setCurrentYearExpertRank] = useState<number | undefined>(50)
+    const [opinionDaysOld, setOpinionDaysOld] = useState<number | undefined>(0)
     const [currentYearRookies, setCurrentYearRookies] = useState<boolean>(false)
     const [errors, setErrors] = useState<AppError[]>([])
 
