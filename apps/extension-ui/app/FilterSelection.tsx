@@ -16,6 +16,9 @@ import {
 /* Filter Selection */
 function FilterSelection() {
     const {
+        currentYearExpertRank,
+        lastYearExpertRank,
+        opinionDaysOld,
         setCurrentYearExpertRank,
         setCurrentYearRookies,
         setLastYearExpertRank,
@@ -29,21 +32,21 @@ function FilterSelection() {
             <FilterTable>
                 <NumericFilter
                     label='Last Season Expert Rank'
-                    defaultValue={50}
+                    defaultValue={lastYearExpertRank}
                     allowZero={false}
                     onChange={setLastYearExpertRank}
                 />
 
                 <NumericFilter
                     label='Current Season Expert Rank'
-                    defaultValue={50}
+                    defaultValue={currentYearExpertRank}
                     allowZero={false}
                     onChange={setCurrentYearExpertRank}
                 />
 
                 <NumericFilter
                     label='Expert Opinion Days Old'
-                    defaultValue={0}
+                    defaultValue={opinionDaysOld}
                     allowZero={true}
                     onChange={setOpinionDaysOld}
                 />
