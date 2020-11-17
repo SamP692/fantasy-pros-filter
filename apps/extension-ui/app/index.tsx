@@ -6,6 +6,7 @@ import { FilterStoreProvider } from '~ui/store'
 
 /* Containers */
 import FilterSelection from './FilterSelection'
+import SubmitButton from './SubmitButton'
 
 /* Components */
 import {
@@ -21,6 +22,8 @@ function App() {
                 <AppHeader headerText='Fantasy Pros Advanced Expert Filter' />
 
                 <FilterSelection />
+
+                <SubmitButton />
             </AppContainer>
         </FilterStoreProvider>
     )
