@@ -29,16 +29,22 @@ function FilterSelection() {
             <FilterTable>
                 <NumericFilter
                     label='Last Season Expert Rank'
+                    defaultValue={50}
+                    allowZero={false}
                     onChange={setLastYearExpertRank}
                 />
 
                 <NumericFilter
                     label='Current Season Expert Rank'
+                    defaultValue={50}
+                    allowZero={false}
                     onChange={setCurrentYearExpertRank}
                 />
 
                 <NumericFilter
                     label='Expert Opinion Days Old'
+                    defaultValue={0}
+                    allowZero={true}
                     onChange={setOpinionDaysOld}
                 />
 

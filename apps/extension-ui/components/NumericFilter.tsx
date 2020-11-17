@@ -1,9 +1,8 @@
 /* Libraries */
-import React, { ChangeEvent } from 'react'
+import React, { ChangeEvent, useState } from 'react'
 
 import {
     Grid,
-    Header,
     Input
 } from 'semantic-ui-react'
 
@@ -11,20 +10,39 @@ import {
 import FilterLabelCell from './FilterLabelCell'
 import FilterValueCell from './FilterValueCell'
 
+/* Utils */
+import { isPositiveNumber } from '~ui/utils'
+
 /* Numeric Filter Props */
 interface NumericFilterProps {
     label: string
+    defaultValue?: number
+    allowZero: boolean
     onChange: (newValue: number | undefined) => void
 }
 
 /* Numeric Filter */
-function NumericFilter({ label, onChange }: NumericFilterProps) {
-    function propogateChange({ target }: ChangeEvent<HTMLInputElement>) {
-        const eventValueAsNumber = Number(target.value)
+function NumericFilter(args: NumericFilterProps) {
+    const {
+        label,
+        defaultValue,
+        allowZero,
+        onChange
+    } = args
 
-        const changeValue = Number.isNaN(eventValueAsNumber) ? undefined : eventValueAsNumber
+    const initialValue = defaultValue === 0 ? 0 : (defaultValue || '')
+    const [inputValue, setInputValue] = useState<number | ''>(initialValue)
 
-        onChange(changeValue)
+    function handleChange({ target }: ChangeEvent<HTMLInputElement>) {
+        const { value } = target
+
+        if (isPositiveNumber({ value, greaterThanZero: !allowZero })) {
+            setInputValue(Number(value))
+            onChange(Number(value))
+        } else if (value === '') {
+            setInputValue('')
+            onChange(undefined)
+        }
     }
 
     return (
@@ -35,10 +53,10 @@ function NumericFilter({ label, onChange }: NumericFilterProps) {
 
             <FilterValueCell>
                 <Input
-                    type='number'
-                    transparent
+                    fluid
                     placeholder={99}
-                    onChange={propogateChange}
+                    value={inputValue}
+                    onChange={handleChange}
                 />
             </FilterValueCell>
         </Grid.Row>
