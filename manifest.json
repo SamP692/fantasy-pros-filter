@@ -6,5 +6,12 @@
     "browser_action": {
         "default_popup": "dist/extension-ui/index.html",
         "default_title": "Fantasy Pros Filter"
-    }
+    },
+    "content_scripts": [{
+        "matches": [
+            "http://*/*",
+            "https://*/*"
+        ],
+        "js": ["dist/content-script/bundle.js"]
+    }]
 }

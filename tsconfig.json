@@ -14,7 +14,8 @@
         "baseUrl": ".",
         "paths": {
             "~ui/*": ["apps/extension-ui/*"],
-            "~script/*": ["apps/content-script/*"]
+            "~script/*": ["apps/content-script/*"],
+            "~global-types": ["global-types"]
         }
     },
     "include": [
