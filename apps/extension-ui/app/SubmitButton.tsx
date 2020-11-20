@@ -16,11 +16,15 @@ function SubmitButton() {
     } = useContext(filterStoreContext)
 
     function handleSubmit() {
-        console.table({
-            'Current Year Expert Ranks': currentYearExpertRank,
-            'Last Year Expert Ranks': lastYearExpertRank,
-            'Opinion Days Old': opinionDaysOld,
-            'Current Year Rooks': currentYearRookies
+        chrome.tabs.query({ active: true, currentWindow: true }, function (tabs) {
+            if (!tabs[0]?.id) return
+
+            chrome.tabs.sendMessage(tabs[0].id, {
+                currentYearExpertRank,
+                lastYearExpertRank,
+                opinionDaysOld,
+                currentYearRookies
+            })
         })
     }
 
