@@ -17,15 +17,15 @@ import {
 /* App */
 function App() {
     return (
-        <FilterStoreProvider>
-            <AppContainer>
-                <AppHeader headerText='Fantasy Pros Advanced Expert Filter' />
+        <AppContainer>
+            <FilterStoreProvider>
+                <AppHeader headerText='Fantasy Pros NFL Cheat Sheet Assistant' />
 
                 <FilterSelection />
 
                 <SubmitButton />
-            </AppContainer>
-        </FilterStoreProvider>
+            </FilterStoreProvider>
+        </AppContainer>
     )
 }
 
