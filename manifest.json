@@ -9,9 +9,9 @@
     },
     "content_scripts": [{
         "matches": [
-            "http://*/*",
-            "https://*/*"
+            "//mpbnfl.fantasypros.com/analyzer_nfl/rosters.jsp?key=nfl~b191cd65-f9ab-4e49-b03e-d490aae6007f&p=fpmp&teamId=13&period=ros"
         ],
-        "js": ["dist/content-script/bundle.js"]
+        "js": ["dist/content-script/bundle.js"],
+        "all_frames": true
     }]
 }
