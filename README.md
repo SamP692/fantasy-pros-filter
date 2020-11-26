@@ -14,13 +14,11 @@ to the cheat sheet rankings.
   - [Tools](#tools)
     - [Node](#node)
     - [TypeScript](#typescript)
-    - [RequireJS and AMD Modules](#requirejs-and-amd-modules)
-  - [Building the Project](#building-the-project)
-    - [Executing the Build](#executing-the-build)
-    - [Shell Script Permissions Issues](#shell-script-permissions-issues)
-    - [Convenience Tip](#convenience-tip)
+    - [Webpack](#webpack)
+  - [Building and Running](#building-and-running)
+    - [Building](#building)
+    - [Running](#running)
 - [Polishing](#polishing)
-- [Edge Cases](#edge-cases)
 
 ## Supported Features
 
@@ -76,38 +74,27 @@ TypeScript compiler in order to prepare functional code for deployment.
 If you don't have TypeScript on your machine, install it with:
 `npm install --global typescript`
 
-#### RequireJS and AMD Modules
+#### Webpack
 
-For simplicity, this project accesses the DOM using "vanilla TS" and to keep things relatively painless, it uses AMD modules and RequireJS to compile each
-project into a simple single-file application.
+The two apps that power this project are compiled from TypeScript to single-file minified JavaScript using Webpack.
 
-### Building the Project
+There is a common Webpack configuration as well as project-specific configurations.
 
-You'll notice this project does not have a `package.json` file. This package only uses RequireJS as a runtime dependency and subsequently really has no real need for a file
-dedicated to Node.js declarations.
+Additionally, the Webpack configurations rely upon a TypeScript configuration file found in the project root.
 
-Moreover, because the project uses a raw `index.html` file which needs to be included in the final extension package, some
-external tooling was needed. Subsequently, this project only uses a bash script to do everything it needs to do to execute the build processes.
+### Building and Running
 
-#### Executing the Build
+#### Building
 
-Simply run `sh build.sh` in order to trigger the build. You'll see some rudimentary printouts describing the processes being executed by the build script.
+Both projects can be built in a single step with `npm run build`.
 
-#### Shell Script Permissions Issues
+Additionally, each can be built separately with `npm run build:ui` and `npm run build:script`.
 
-If you get a `permissions denied` response the first time you attempt to run the build, simply execute `chmod +x ./build.sh` while in the project directory.
+**Note:** Building a single project will not remove the other project's build from the `dist` directory. If you are only developing against the "script" project, for instance, you can save time by only rebuilding that project during the development.
 
-#### Convenience Tip
+#### Running
 
-You can clean up the build command by adding the following to your bash or zshell profile:
-
-```sh
-function run() {
-    sh $1.sh
-}
-```
-
-At this point you can simply execute `run build` from your terminal, while within the project directory.
+The "UI" project can be run in a development server that supports hot reloading with `npm run start:ui`.
 
 ## Polishing
 
@@ -125,9 +112,3 @@ At this point you can simply execute `run build` from your terminal, while withi
 [] Remove semantic-ui for performance reasons
 [] Cache last configuration and load upon opening popup
 [x] Stop opening expert modal
-
-## Edge Cases
-
-[x] Expert modal is not sorted by published at
-[] ~~Filter popup is opened while modal is already open~~
-    [] ~~Skip step to open modal~~
