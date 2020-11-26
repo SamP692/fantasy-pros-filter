@@ -19,7 +19,8 @@ to the cheat sheet rankings.
     - [Executing the Build](#executing-the-build)
     - [Shell Script Permissions Issues](#shell-script-permissions-issues)
     - [Convenience Tip](#convenience-tip)
-- [TODO](#todo)
+- [Polishing](#polishing)
+- [Edge Cases](#edge-cases)
 
 ## Supported Features
 
@@ -108,15 +109,24 @@ function run() {
 
 At this point you can simply execute `run build` from your terminal, while within the project directory.
 
-## TODO
+## Polishing
 
-[] Determine whether or not content scripts will need RequireJS or can be shipped as several files
-    [] If RequireJS is needed:
-        [] Figure out how to ensure RequireJS is loaded first
-        [] Update build script to add RequireJS to `content-scripts` project
-    [] If RequireJS is not needed:
-        [] Updated tsconfigs to separately define the output of their builds
-[] Add error notifications to popup
-    [] Bad config
-    [] Content script error
-    [] Not on fantasy pros experts tab
+[] Add URL checking to popup
+    [] Don't show filter if not on right page
+[] Validate filter configuration on script side
+[] Send responses from content script to popup
+    [] Send confirmation of receipt
+    [] Trigger loading indication in UI upon confirmation of receipt
+    [] Throw error if loading process takes too long
+    [] Send confirmation of success
+    [] Send errors
+    [] Complete loading indication if success message is received
+    [] Display errors in UI
+[] Remove semantic-ui for performance reasons
+[] Cache last configuration and load upon opening popup
+
+## Edge Cases
+
+[x] Expert modal is not sorted by published at
+[] Filter popup is opened while modal is already open
+    [] Skip step to open modal
