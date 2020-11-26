@@ -1,4 +1,4 @@
-# Fantasy Pros Cheat Sheet Filter
+# Fantasy Pros Cheat Sheet Assistant
 
 This repo creates a local chrome extension that augments Fantasy Pros' cheat sheet expert filtering.
 
@@ -98,17 +98,17 @@ The "UI" project can be run in a development server that supports hot reloading 
 
 ## Polishing
 
-[] Add URL checking to popup
-    [] Don't show filter if not on right page
-[] Validate filter configuration on script side
-[] Send responses from content script to popup
-    [] Send confirmation of receipt
-    [] Trigger loading indication in UI upon confirmation of receipt
-    [] Throw error if loading process takes too long
-    [] Send confirmation of success
-    [] Send errors
-    [] Complete loading indication if success message is received
-    [] Display errors in UI
-[] Remove semantic-ui for performance reasons
-[] Cache last configuration and load upon opening popup
-[x] Stop opening expert modal
+- [] Add URL checking to popup
+  - [] Don't show filter if not on right page
+- [] Validate filter configuration on script side
+- [] Send responses from content script to popup
+  - [] Send confirmation of receipt
+  - [] Trigger loading indication in UI upon confirmation of receipt
+  - [] Throw error if loading process takes too long
+  - [] Send confirmation of success
+  - [] Send errors
+  - [] Complete loading indication if success message is received
+  - [] Display errors in UI
+- [] Remove semantic-ui for performance reasons
+- [] Cache last configuration and load upon opening popup
+- [x] Stop opening expert modal
