@@ -6,6 +6,7 @@ import AppError from './AppError'
 
 /* Filter Store Provider */
 interface FilterStoreProvider {
+    onCheatSheet: boolean
     lastYearExpertRank?: number
     currentYearExpertRank?: number
     opinionDaysOld?: number
