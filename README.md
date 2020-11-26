@@ -100,7 +100,9 @@ The "UI" project can be run in a development server that supports hot reloading 
 
 - [] Add URL checking to popup
   - [] Don't show filter if not on right page
-- [] Validate filter configuration on script side
+- [] Validate filter configuration
+  - [] Validate on UI side
+  - [] Alert user if configuration is incomplete
 - [] Send responses from content script to popup
   - [] Send confirmation of receipt
   - [] Trigger loading indication in UI upon confirmation of receipt
