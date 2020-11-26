@@ -39,13 +39,15 @@ function convertDaysOldToNumber(daysOldString: string): number {
 }
 
 /* Get Opinion Days Old */
-function validateOpinionAge(opinionRecord: number) {
+function getOpinionDaysOld(opinionRecord: number) {
     const daysOldSelector = selectorCreators.opinionDaysOld(opinionRecord)
     const daysOldElement: RowElement = document.querySelector(daysOldSelector)
 
-    if (!daysOldElement) throw new Error(`No opinion for row #${opinionRecord}`)
+    if (!daysOldElement) {
+        throw new Error(`Opinion element not found for row #${opinionRecord}`)
+    }
 
-    const daysOldValue = daysOldElement.innerText.trim()
+    const daysOldValue = daysOldElement.innerText.trim().toLowerCase().split('ts=')[0]
 
     const daysOld = convertDaysOldToNumber(daysOldValue)
 
@@ -56,4 +58,4 @@ function validateOpinionAge(opinionRecord: number) {
     return daysOld
 }
 
-export default validateOpinionAge
+export default getOpinionDaysOld
