@@ -124,9 +124,10 @@ At this point you can simply execute `run build` from your terminal, while withi
     [] Display errors in UI
 [] Remove semantic-ui for performance reasons
 [] Cache last configuration and load upon opening popup
+[x] Stop opening expert modal
 
 ## Edge Cases
 
 [x] Expert modal is not sorted by published at
-[] Filter popup is opened while modal is already open
-    [] Skip step to open modal
+[] ~~Filter popup is opened while modal is already open~~
+    [] ~~Skip step to open modal~~
