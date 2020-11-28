@@ -11,6 +11,7 @@ interface FilterStoreProvider {
     currentYearExpertRank?: number
     opinionDaysOld?: number
     currentYearRookies?: boolean
+    appLoading: boolean
     errors?: AppError[]
     setCurrentYearExpertRank: Dispatch<SetStateAction<number | undefined>>
     setLastYearExpertRank: Dispatch<SetStateAction<number | undefined>>

@@ -98,8 +98,8 @@ The "UI" project can be run in a development server that supports hot reloading 
 
 ## Polishing
 
-- [] Add URL checking to popup
-  - [] Don't show filter if not on right page
+- [x] Add URL checking to popup
+  - [x] Don't show filter if not on right page
 - [] Validate filter configuration
   - [] Validate on UI side
   - [] Alert user if configuration is incomplete
@@ -112,5 +112,7 @@ The "UI" project can be run in a development server that supports hot reloading 
   - [] Complete loading indication if success message is received
   - [] Display errors in UI
 - [] Remove semantic-ui for performance reasons
+- [] Control optional inputs with checkboxes
 - [] Cache last configuration and load upon opening popup
+- [] Clean up UI code
 - [x] Stop opening expert modal

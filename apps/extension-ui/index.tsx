@@ -10,11 +10,16 @@ import { ENTRY_ELEMENT_ID } from './configs'
 /* App */
 import App from '~ui/app'
 
+/* Store */
+import { FilterStoreProvider } from '~ui/store'
+
 /* App Entry Point Element */
 const appEntryElement = document.querySelector(`#${ENTRY_ELEMENT_ID}`)
 
 /* App Initialization */
 render(
-    <App />,
+    <FilterStoreProvider>
+        <App />
+    </FilterStoreProvider>,
     appEntryElement
 )
