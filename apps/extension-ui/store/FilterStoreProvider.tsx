@@ -3,9 +3,6 @@ import React, { useState } from 'react'
 
 import type { PropsWithChildren } from 'react'
 
-/* Configs */
-import { CHEAT_SHEET_REGEX } from '~ui/configs'
-
 /* Filter Store Context */
 import filterStoreContext from './filterStoreContext'
 
