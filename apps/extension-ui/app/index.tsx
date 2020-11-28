@@ -55,7 +55,7 @@ function App() {
 
     return (
         <AppContainer>
-            <AppHeader headerText='Fantasy Pros NFL Cheat Sheet Assistant' />
+            <AppHeader headerText='Fantasy Pros Cheat Sheet Assistant' />
 
             <RenderedBody loading={appLoading} onCheatSheet={onCheatSheet} />
         </AppContainer>
