@@ -3,6 +3,9 @@ import React, { useContext } from 'react'
 
 import { Button } from 'semantic-ui-react'
 
+/* Services */
+import { chromeExt } from '~services'
+
 /* Context */
 import { filterStoreContext } from '~ui/store'
 
@@ -16,16 +19,17 @@ function SubmitButton() {
     } = useContext(filterStoreContext)
 
     function handleSubmit() {
-        chrome.tabs.query({ active: true, currentWindow: true }, function (tabs) {
-            if (!tabs[0]?.id) return
+        if (!opinionDaysOld || (!lastYearExpertRank && !currentYearExpertRank)) return
 
-            chrome.tabs.sendMessage(tabs[0].id, {
-                currentYearExpertRank,
-                lastYearExpertRank,
-                opinionDaysOld,
-                currentYearRookies
-            })
-        })
+        const finalConfig = {
+            currentYearRookies: !!currentYearRookies,
+            opinionDaysOld,
+            currentYearExpertRank,
+            lastYearExpertRank
+        }
+
+        chromeExt.sendFiltersToTab(finalConfig)
+        chromeExt.updateFilterCache(finalConfig)
     }
 
     return (
