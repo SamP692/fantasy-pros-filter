@@ -64,7 +64,7 @@ the prior year group, it'll simply ignore current year experts who don't meet th
 
 #### Node
 
-This project requires your system to have the Node.js runtime available. If you don't have it, head over to the [installer]<https://nodejs.org/en/>
+This project requires your system to have the Node.js runtime available. If you don't have it, head over to the [installer](https://nodejs.org/en/)
 
 #### TypeScript
 
