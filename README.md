@@ -101,7 +101,7 @@ The "UI" project can be run in a development server that supports hot reloading 
 - [x] Add URL checking to popup
   - [x] Don't show filter if not on right page
 - [ ] Validate filter configuration
-  - [ ] Validate on UI side
+  - [x] Validate on UI side
   - [ ] Alert user if configuration is incomplete
 - [ ] Send responses from content script to popup
   - [ ] Send confirmation of receipt
@@ -113,10 +113,14 @@ The "UI" project can be run in a development server that supports hot reloading 
   - [ ] Display errors in UI
 - [ ] Remove semantic-ui for performance reasons
 - [ ] Control optional inputs with checkboxes
-- [ ] Cache last configuration and load upon opening popup
+- [x] Cache last configuration and load upon opening popup
 - [ ] Clean up UI code
   - [ ] State management
     - [ ] Manage state with reducer
   - [x] Convert chrome API interactions to services
   - [ ] Update cache with every field change
 - [x] Stop opening expert modal
+- [ ] Add tests
+- [ ] Add "More Info" section
+- [ ] Add "Advanced Filters" section
+  - [ ] Include "Rookies Only" here
