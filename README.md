@@ -115,4 +115,6 @@ The "UI" project can be run in a development server that supports hot reloading 
 - [] Control optional inputs with checkboxes
 - [] Cache last configuration and load upon opening popup
 - [] Clean up UI code
+  - [] State management
+  - [] Convert chrome API interactions to services
 - [x] Stop opening expert modal
