@@ -15,10 +15,12 @@
         "paths": {
             "~ui/*": ["apps/extension-ui/*"],
             "~script/*": ["apps/content-script/*"],
-            "~global-types": ["global-types"]
+            "~global-types": ["global-types"],
+            "~services": ["services"]
         }
     },
     "include": [
-        "./apps/"
+        "./apps/",
+        "./services/"
     ],
 }
