@@ -16,11 +16,13 @@
             "~ui/*": ["apps/extension-ui/*"],
             "~script/*": ["apps/content-script/*"],
             "~global-types": ["global-types"],
-            "~services": ["services"]
+            "~services": ["services"],
+            "~global-configs": ["global-configs"]
         }
     },
     "include": [
         "./apps/",
-        "./services/"
+        "./services/",
+        "./global-configs/"
     ],
 }

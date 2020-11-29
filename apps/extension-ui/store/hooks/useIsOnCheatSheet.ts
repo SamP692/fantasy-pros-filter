@@ -2,7 +2,7 @@
 import { useState } from 'react'
 
 /* Configs */
-import { CHEAT_SHEET_REGEX } from '~ui/configs'
+import { CHEAT_SHEET_REGEX } from '~global-configs'
 
 /* Services */
 import { chromeExt } from '~services'
